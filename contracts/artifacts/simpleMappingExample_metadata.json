@@ -1,0 +1,78 @@
+{
+	"compiler": {
+		"version": "0.7.4+commit.3f05b770"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "mymapping",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "index",
+						"type": "uint256"
+					}
+				],
+				"name": "setmapping",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/simpleMappingExample.sol": "simpleMappingExample"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/simpleMappingExample.sol": {
+			"keccak256": "0xe747cc157da173475b732730a86a8766b6ebc64168e98f94fd2807894ea27ad4",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://e79f78b959f6fd43dec4e79e7b30169c4b681027f8ed3ef1fbba1d2e75048070",
+				"dweb:/ipfs/QmUTQgwo1uMwXUAUxR6aY4Kmj5ruWT3o3423hAyjSztrN5"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,121 @@
+{
+	"compiler": {
+		"version": "0.7.4+commit.3f05b770"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "balanceReceived",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "totalBalance",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "numOfPayments",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "sendMoney",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address payable",
+						"name": "_to",
+						"type": "address"
+					}
+				],
+				"name": "withdrawAllMoney",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address payable",
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amont",
+						"type": "uint256"
+					}
+				],
+				"name": "withdrawMoney",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/MappingStructExample.sol": "MappingStructExample"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/MappingStructExample.sol": {
+			"keccak256": "0x42f9ea0843cd16d6ad8e73af54c60d8a8b0a2c12795cd9703b5f72adf1bb67e4",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://270040c2dcab92cc80f682581ef807c7d2ff39c5d7148e16ac6477a653ade7e0",
+				"dweb:/ipfs/QmT3WgSsPSGLJhmWd4wtX5BCD9tg17kTHASFZzj7m3mdMN"
+			]
+		}
+	},
+	"version": 1
+}
