@@ -1,0 +1,249 @@
+> var contract=new web3.eth.Contract([
+...     {
+.....           "inputs": [
+.....                   {
+.......                                 "internalType": "uint256",
+.......                                 "name": "_myunits",
+.......                                 "type": "uint256"
+.......                         }
+.....           ],
+.....           "name": "setMyunits",
+.....           "outputs": [],
+.....           "stateMutability": "nonpayable",
+.....           "type": "function"
+.....   },
+...     {
+.....           "inputs": [],
+.....           "name": "myunits",
+.....           "outputs": [
+.....                   {
+.......                                 "internalType": "uint256",
+.......                                 "name": "",
+.......                                 "type": "uint256"
+.......                         }
+.....           ],
+.....           "stateMutability": "view",
+.....           "type": "function"
+.....   }
+... ],"0x55D01e0f671375d7DE30b6CE957E842139ebd21B");
+undefined
+> con
+const        continue
+
+console      contract
+
+constructor
+
+> contract
+Contract {
+  setProvider: [Function],
+  currentProvider: [Getter/Setter],
+  _requestManager: RequestManager {
+    provider: HttpProvider {
+      withCredentials: false,
+      timeout: 0,
+      headers: undefined,
+      agent: undefined,
+      connected: true,
+      host: 'http://localhost:7545',
+      httpAgent: [Agent]
+    },
+    providers: {
+      WebsocketProvider: [Function: WebsocketProvider],
+      HttpProvider: [Function: HttpProvider],
+      IpcProvider: [Function: IpcProvider]
+    },
+    subscriptions: Map {}
+  },
+  givenProvider: null,
+  providers: {
+    WebsocketProvider: [Function: WebsocketProvider],
+    HttpProvider: [Function: HttpProvider],
+    IpcProvider: [Function: IpcProvider]
+  },
+  _provider: HttpProvider {
+    withCredentials: false,
+    timeout: 0,
+    headers: undefined,
+    agent: undefined,
+    connected: true,
+    host: 'http://localhost:7545',
+    httpAgent: Agent {
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _maxListeners: undefined,
+      defaultPort: 80,
+      protocol: 'http:',
+      options: [Object],
+      requests: {},
+      sockets: {},
+      freeSockets: {},
+      keepAliveMsecs: 1000,
+      keepAlive: true,
+      maxSockets: Infinity,
+      maxFreeSockets: 256,
+      [Symbol(kCapture)]: false
+    }
+  },
+  setRequestManager: [Function],
+  BatchRequest: [Function: bound Batch],
+  extend: [Function: ex] {
+    formatters: {
+      inputDefaultBlockNumberFormatter: [Function: inputDefaultBlockNumberFormatter],
+      inputBlockNumberFormatter: [Function: inputBlockNumberFormatter],
+      inputCallFormatter: [Function: inputCallFormatter],
+      inputTransactionFormatter: [Function: inputTransactionFormatter],
+      inputAddressFormatter: [Function: inputAddressFormatter],
+      inputPostFormatter: [Function: inputPostFormatter],
+      inputLogFormatter: [Function: inputLogFormatter],
+      inputSignFormatter: [Function: inputSignFormatter],
+      inputStorageKeysFormatter: [Function: inputStorageKeysFormatter],
+      outputProofFormatter: [Function: outputProofFormatter],
+      outputBigNumberFormatter: [Function: outputBigNumberFormatter],
+      outputTransactionFormatter: [Function: outputTransactionFormatter],
+      outputTransactionReceiptFormatter: [Function: outputTransactionReceiptFormatter],
+      outputBlockFormatter: [Function: outputBlockFormatter],
+      outputLogFormatter: [Function: outputLogFormatter],
+      outputPostFormatter: [Function: outputPostFormatter],
+      outputSyncingFormatter: [Function: outputSyncingFormatter]
+    },
+    utils: {
+      _fireError: [Function: _fireError],
+      _jsonInterfaceMethodToString: [Function: _jsonInterfaceMethodToString],
+      _flattenTypes: [Function: _flattenTypes],
+      randomHex: [Function: randomHex],
+      _: [Function],
+      BN: [Function],
+      isBN: [Function: isBN],
+      isBigNumber: [Function: isBigNumber],
+      isHex: [Function: isHex],
+      isHexStrict: [Function: isHexStrict],
+      sha3: [Function],
+      sha3Raw: [Function: sha3Raw],
+      keccak256: [Function],
+      soliditySha3: [Function: soliditySha3],
+      soliditySha3Raw: [Function: soliditySha3Raw],
+      encodePacked: [Function: encodePacked],
+      isAddress: [Function: isAddress],
+      checkAddressChecksum: [Function: checkAddressChecksum],
+      toChecksumAddress: [Function: toChecksumAddress],
+      toHex: [Function: toHex],
+      toBN: [Function: toBN],
+      bytesToHex: [Function: bytesToHex],
+      hexToBytes: [Function: hexToBytes],
+      hexToNumberString: [Function: hexToNumberString],
+      hexToNumber: [Function: hexToNumber],
+      toDecimal: [Function: hexToNumber],
+      numberToHex: [Function: numberToHex],
+      fromDecimal: [Function: numberToHex],
+      hexToUtf8: [Function: hexToUtf8],
+      hexToString: [Function: hexToUtf8],
+      toUtf8: [Function: hexToUtf8],
+      stripHexPrefix: [Function: stripHexPrefix],
+      utf8ToHex: [Function: utf8ToHex],
+      stringToHex: [Function: utf8ToHex],
+      fromUtf8: [Function: utf8ToHex],
+      hexToAscii: [Function: hexToAscii],
+      toAscii: [Function: hexToAscii],
+      asciiToHex: [Function: asciiToHex],
+      fromAscii: [Function: asciiToHex],
+      unitMap: [Object],
+      toWei: [Function: toWei],
+      fromWei: [Function: fromWei],
+      padLeft: [Function: leftPad],
+      leftPad: [Function: leftPad],
+      padRight: [Function: rightPad],
+      rightPad: [Function: rightPad],
+      toTwosComplement: [Function: toTwosComplement],
+      isBloom: [Function: isBloom],
+      isUserEthereumAddressInBloom: [Function: isUserEthereumAddressInBloom],
+      isContractAddressInBloom: [Function: isContractAddressInBloom],
+      isTopic: [Function: isTopic],
+      isTopicInBloom: [Function: isTopicInBloom],
+      isInBloom: [Function: isInBloom],
+      compareBlockNumbers: [Function: compareBlockNumbers]
+    },
+    Method: [Function: Method]
+  },
+  clearSubscriptions: [Function],
+  options: { address: [Getter/Setter], jsonInterface: [Getter/Setter] },
+  handleRevert: [Getter/Setter],
+  defaultCommon: [Getter/Setter],
+  defaultHardfork: [Getter/Setter],
+  defaultChain: [Getter/Setter],
+  transactionPollingTimeout: [Getter/Setter],
+  transactionConfirmationBlocks: [Getter/Setter],
+  transactionBlockTimeout: [Getter/Setter],
+  defaultAccount: [Getter/Setter],
+  defaultBlock: [Getter/Setter],
+  methods: {
+    setMyunits: [Function: bound _createTxObject],
+    '0x3e3464a3': [Function: bound _createTxObject],
+    'setMyunits(uint256)': [Function: bound _createTxObject],
+    myunits: [Function: bound _createTxObject],
+    '0x65e2a251': [Function: bound _createTxObject],
+    'myunits()': [Function: bound _createTxObject]
+  },
+  events: { allEvents: [Function: bound ] },
+  _address: '0x55D01e0f671375d7DE30b6CE957E842139ebd21B',
+  _jsonInterface: [
+    {
+      inputs: [Array],
+      name: 'setMyunits',
+      outputs: [],
+      stateMutability: 'nonpayable',
+      type: 'function',
+      constant: undefined,
+      payable: undefined,
+      signature: '0x3e3464a3'
+    },
+    {
+      inputs: [],
+      name: 'myunits',
+      outputs: [Array],
+      stateMutability: 'view',
+      type: 'function',
+      constant: true,
+      payable: undefined,
+      signature: '0x65e2a251'
+    }
+  ]
+}
+> contract.methods.
+contract.methods.__defineGetter__      contract.methods.__defineSetter__      contract.methods.__lookupGetter__      contract.methods.__lookupSetter__
+contract.methods.__proto__             contract.methods.constructor           contract.methods.hasOwnProperty        contract.methods.isPrototypeOf
+contract.methods.propertyIsEnumerable  contract.methods.toLocaleString        contract.methods.toString              contract.methods.valueOf
+
+contract.methods.myunits               contract.methods.setMyunits
+
+> contract.methods.myunits().call()
+Promise { <pending> }
+> contract.methods.myunits().call().then(console.log)
+Promise { <pending> }
+> 0
+> con
+const        continue
+
+console      contract
+
+constructor
+
+> contract.methods.setMyunits(59).send({from:"0x399434889E9ecBE87Be63B8C67dEc0CaC32a2850"}).then(console.log)
+Promise { <pending> }
+> {
+  transactionHash: '0x0f5d3883b9c678a9f1ab6c921375c1da54a5068b79b92d052bfbc47539f9a33c',
+  transactionIndex: 0,
+  blockHash: '0xb1a9f6cc89d98582de59a07ba3dcd0d23a840b2e0acaa3a0c00a936e8aa3101b',
+  blockNumber: 4,
+  from: '0x399434889e9ecbe87be63b8c67dec0cac32a2850',
+  to: '0x55d01e0f671375d7de30b6ce957e842139ebd21b',
+  gasUsed: 41424,
+  cumulativeGasUsed: 41424,
+  contractAddress: null,
+  status: true,
+  logsBloom: '0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+  events: {}
+}
+
+> contract.methods.myunits().call().then(console.log)
+Promise { <pending>

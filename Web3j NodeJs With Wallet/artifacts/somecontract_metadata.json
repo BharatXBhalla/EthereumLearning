@@ -1,0 +1,72 @@
+{
+	"compiler": {
+		"version": "0.7.6+commit.7338295f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "myunits",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_myunits",
+						"type": "uint256"
+					}
+				],
+				"name": "setMyunits",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Web3j NodeJs With Wallet/SomeContract.sol": "somecontract"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Web3j NodeJs With Wallet/SomeContract.sol": {
+			"keccak256": "0x9577d0edd0b96561948b38e99bfa391435ef74be57bb42ac7cc7da638c5170e1",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d6935edfcced66ddcc5ce945dd4d7fcacc5abe75267e09738aa47e6fb3b07795",
+				"dweb:/ipfs/QmUrbZgX6yFZTHzMnTtvgQao6yH3tXEdAHFsYrgUYn8P4r"
+			]
+		}
+	},
+	"version": 1
+}
