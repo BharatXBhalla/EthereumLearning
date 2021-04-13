@@ -6,34 +6,18 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [
-					{
-						"internalType": "contract ItemManager",
-						"name": "_parentContract",
-						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "_priceInWei",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "_index",
-						"type": "uint256"
-					}
-				],
+				"inputs": [],
 				"stateMutability": "nonpayable",
 				"type": "constructor"
 			},
 			{
 				"inputs": [],
-				"name": "index",
+				"name": "isOwner",
 				"outputs": [
 					{
-						"internalType": "uint256",
+						"internalType": "bool",
 						"name": "",
-						"type": "uint256"
+						"type": "bool"
 					}
 				],
 				"stateMutability": "view",
@@ -41,33 +25,16 @@
 			},
 			{
 				"inputs": [],
-				"name": "priceInWei",
+				"name": "owner",
 				"outputs": [
 					{
-						"internalType": "uint256",
+						"internalType": "address",
 						"name": "",
-						"type": "uint256"
+						"type": "address"
 					}
 				],
 				"stateMutability": "view",
 				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "pricePaid",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"stateMutability": "payable",
-				"type": "receive"
 			}
 		],
 		"devdoc": {
@@ -83,7 +50,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"Supply Chain Use Case/eventtrigger.sol": "Item"
+			"Supply Chain Use Case/eventtrigger.sol": "Ownerable"
 		},
 		"evmVersion": "istanbul",
 		"libraries": {},

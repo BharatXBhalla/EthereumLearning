@@ -19,6 +19,12 @@
 						"internalType": "uint256",
 						"name": "_step",
 						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "_itemaddress",
+						"type": "address"
 					}
 				],
 				"name": "SuppyChainStep",
@@ -40,6 +46,19 @@
 				"name": "createItem",
 				"outputs": [],
 				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "isOwner",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -69,7 +88,20 @@
 					},
 					{
 						"internalType": "contract Item",
-						"name": "item",
+						"name": "_item",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
 						"type": "address"
 					}
 				],
@@ -131,11 +163,11 @@
 	},
 	"sources": {
 		"Supply Chain Use Case/eventtrigger.sol": {
-			"keccak256": "0xaafb2b317f720ad1e2e43d88bfdffae25b2406850b5d01d6aa69ebe4f2a26ac7",
+			"keccak256": "0x1697c3c733f1bc16def3b705bb3749350f1725fe0db8c5952065b640c8b594f2",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://06ffe5f242451537f0690e866f843d395a157a9c01c60af3dd0f072cda71004b",
-				"dweb:/ipfs/QmTPjpAxCUKVMJDcEu2a6HFB22U44Yof4iSUrDvQoqVrUD"
+				"bzz-raw://5d87bc24f8144b9a6c0b7fdaf85260e76d883ce9c70ffe4410400583d995cdef",
+				"dweb:/ipfs/QmREvGx5PaQ8WP1LT7JXHk3wx4DzJJZ8BGa6AxTtgeUL1y"
 			]
 		}
 	},
