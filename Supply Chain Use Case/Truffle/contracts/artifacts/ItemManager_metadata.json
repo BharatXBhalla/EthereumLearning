@@ -1,0 +1,191 @@
+{
+	"compiler": {
+		"version": "0.7.6+commit.7338295f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "_itemIndex",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "_step",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "_itemaddress",
+						"type": "address"
+					}
+				],
+				"name": "SuppyChainStep",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_identifier",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_itemPrice",
+						"type": "uint256"
+					}
+				],
+				"name": "createItem",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "isOwner",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "items",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "_identifier",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_itemPrice",
+						"type": "uint256"
+					},
+					{
+						"internalType": "enum ItemManager.SuppyChainState",
+						"name": "_state",
+						"type": "uint8"
+					},
+					{
+						"internalType": "contract Item",
+						"name": "_item",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_itemIndex",
+						"type": "uint256"
+					}
+				],
+				"name": "triggerDelivery",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_itemIndex",
+						"type": "uint256"
+					}
+				],
+				"name": "triggerPayment",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Supply Chain Use Case/Truffle/contracts/ItemManager.sol": "ItemManager"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Supply Chain Use Case/Truffle/contracts/ItemManager.sol": {
+			"keccak256": "0x2326794fa8f0b455b18b1dedef35af6837e178cf72f63f0d3ed9e1443cf8beb5",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f897e173858de929b7eb966f6c01d8864eb0ddaa4c9d95033cd457cfca454cff",
+				"dweb:/ipfs/Qma8hPTb4JJWXRsKbK2DcaN3cdrMsaANg7uqBvQmKeaJWr"
+			]
+		},
+		"Supply Chain Use Case/Truffle/contracts/Items.sol": {
+			"keccak256": "0xc7838a8bce31dd132d68c7ae3b22280b2930000ef2559489d35b826c3d1661b6",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a8b684564dc1331edabad1b11660dacf9308eb4ce41982c0fa0cbf2da12ae3ff",
+				"dweb:/ipfs/QmeJSBmCptmD5FvGktekksqqaW9majdQJ7oGWJgiSFkdDX"
+			]
+		},
+		"Supply Chain Use Case/Truffle/contracts/Ownerable.sol": {
+			"keccak256": "0xffbacf9f20abce065835e80a2fff829ec078556cf7dfedd30a3713719c5eed10",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b65c7bfd709f933a9389f7914102bf3ee6257f211e0a3a971b44a5a9bc03fffa",
+				"dweb:/ipfs/QmPLM15HVrFwW3PMSvVGQqT7EihSU4dD86fRxTGiVMWCF3"
+			]
+		}
+	},
+	"version": 1
+}
