@@ -1,0 +1,21 @@
+geth :: Starts Downloading Etherum from Web
+geth attach :: Starts A client Js Interaction to geth via IPC
+
+personal.newAccount() // Creates a new newAccount
+
+:::: CREATE A New Priavte Etherum Block Chain ::::
+copy genesis.json into dir
+1) geth init .\genesis.json --datadir mychaindata
+2) geth --datadir .\   mychaindata --nodiscover
+geth attach
+eth.accounts
+personal.newAccount("password")
+
+:::: Mining on Private Block Chain ::::
+eth.coinbase
+miner
+miner.setEtherbase(eth.accounts[0]);
+miner.start(1); 
+web3.eth.getBalance(eth.accounts[0]);
+
+geth --datadir mychaindata --nodiscover --unlock 0 --mine 1
