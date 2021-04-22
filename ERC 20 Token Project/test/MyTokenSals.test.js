@@ -1,6 +1,6 @@
 const Token= artifacts.require("MyToken");
 const TokenSale = artifacts.require("MyTokenSale");
-
+const Kyc=artifacts.require("Kyc");
 const chai=require("./setupChai.js");
 const BN=web3.utils.BN;
 const expect=chai.expect;
@@ -25,11 +25,21 @@ contract("MyTokenSale Test", async(accounts)=>{
     it("shoudl be possible to buy token", async()=>{
         let tokeninstance = await Token.deployed();
         let tokenSaleInstance = await TokenSale.deployed();
-        let balanceBefore = await tokeninstance.balanceOf(deployerAccount);
-        
-        expect(tokenSaleInstance.sendTransaction({from:deployerAccount,value: web3.utils.toWei("1","wei")})).to.be.fulfilled;
-
+        let kycInstance=await Kyc.deployed();
+        let balanceBefore = await tokeninstance.balanceOf(anotherAccount);
+        let res1=await kycInstance.setKycCompleted(deployerAccount,{from: deployerAccount});
+        let isAuth = await kycInstance.kycCompleted(deployerAccount);
+        console.log(res1);
+        console.log(isAuth);
+        let res=await tokenSaleInstance.sendTransaction({from:anotherAccount,value: web3.utils.toWei("1","wei")});
+        console.log(res);
         let balance=await balanceBefore.add(new BN(1));
-        return expect(tokeninstance.balanceOf(deployerAccount)).to.eventually.be.a.bignumber.equal(balance);
+        let balanceinwallet=await tokeninstance.balanceOf(anotherAccount);
+        if(balance===balanceinwallet){
+            console.log("Yes");
+        }else{
+            return Error("Not Equal");
+        }
+        return;
     })
 })

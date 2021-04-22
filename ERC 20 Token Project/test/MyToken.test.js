@@ -12,7 +12,7 @@ contract("Token Test", async(accounts)=>{
     const[deployerAccount,recipient,anotherAccount]=accounts;
 
     beforeEach(async ()=>{
-        this.myTokenInstance= await Token.new(process.env.INNTIAL_TOKEN);
+        return this.myTokenInstance= await Token.new(process.env.INNTIAL_TOKEN);
     });
 
     it("all tokens should be in my account",async ()=>{
