@@ -7,7 +7,7 @@ import getWeb3 from "./getWeb3";
 import "./App.css";
 
 class App extends Component {
-  state = { loaded:false , kycaddress :"0x",tokenSalesContractAddress:"0x"};
+  state = { loaded:false , kycaddress :"0x",tokenSalesContractAddress:"0x",tokenbalance:0};
 
   componentDidMount = async () => {
     try {
@@ -57,6 +57,19 @@ class App extends Component {
     });
   }
 
+  updateTokenBalance=async()=>{
+   let userToken = await this.TokenContract.methods.balanceOf(this.accounts[0]).call();
+   this.setState({tokenbalance:userToken});
+  }
+
+  listenToTokenTransfer=()=>{
+    this.Tokeninstance.events.Transfer({to: this.accounts[0]}).on("data",this.updateTokenBalance);
+  }
+
+  handleBuyTokens=async ()=>{
+    await this.TokenSaleinstance.methods.buyTokens(this.accounts[0]).send({from:this.accounts[0],value:this.web3.utils.toWei("1","wei")});
+  }
+
   handleKycRequest= async () =>{
     await this.Kycinstance.methods.setKycCompleted(this.state.kycaddress).send({from:this.accounts[0]});
     alert("KYC for "+ this.state.kycaddress+ " is completed");
@@ -76,6 +89,10 @@ class App extends Component {
         <br></br>
         <h1>BUY CPD Token </h1>
         <p>Transfer Funds to {this.state.tokenSalesContractAddress}</p>
+        <h1>Check Your CPD Token Balance</h1>
+        <p>Your Balance is {this.state.tokenbalance}</p>
+        <h1>Buy Tokens</h1>
+        <button type="button" onClick={this.handleBuyTokens}>Buy Tokens</button>
       </div>
     );
   }

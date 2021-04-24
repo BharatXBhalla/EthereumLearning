@@ -18,6 +18,18 @@ module.exports = {
         return new hdwalletProvider(process.env.MENOMICS,"http://127.0.0.1:7545",AccountIndex);
       },
       network_id: 5777
+    },
+    gorli:{
+      provider: function (){
+        return new hdwalletProvider(process.env.MENOMICS,"https://goerli.infura.io/v3/e632a23ff4014160858c108d4fa5ae46",AccountIndex);
+      },
+      network_id: 5
+    },
+    rinkeby:{
+      provider: function (){
+        return new hdwalletProvider(process.env.MENOMICS,"https://rinkeby.infura.io/v3/e632a23ff4014160858c108d4fa5ae46",AccountIndex);
+      },
+      network_id: 4
     }
   },
   compilers:{
